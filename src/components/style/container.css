@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1600px;
+    height: 1020px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 8px #888888;
+    position: relative;
+    z-index: 0;
+}
+
+.header {
+    height: 132px;
+    text-align: center;
+    background-color: #111111;
+    color: #FFFFFF;
+    padding: 23px;
+    box-sizing: border-box;
+}
+
+.header>h1 {
+    font-size: 44px;
+    font-family: adobe-garamond-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2.2px;
+    height: 50px;
+}
+
+.header>p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.48px;
+    height: 20px;
+    margin-top: 13px;
+}
+
+.content {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.content__left {
+    width: 1000px;
+    height: 888px;
+    padding: 30px 100px;
+    box-sizing: border-box;
+}
+
+.content__left__stepper {
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    padding:0 100px;
+    margin-bottom: 43px;
+
+
+}
+
+.content__left__menu {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content__left__menu__item {
+    font-size: 20px;
+    margin-right: 32px;
+    color: #484848;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.content__left__menu__isSelected {
+    color: #111111 !important;
+    font-weight: bold;
+    border-bottom: 8px solid #111111;
+    padding-bottom: 8px;
+}
+.content__left__stepper__item>.MuiSvgIcon-root{
+    color:white !important;
+    font-size:39px;
+    background-color:#CCCCCC;
+    padding:10.5px;
+    border-radius: 100%;
+}
+.content__left__stepper__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.content__left__stepper__item>p{
+    margin-top:15px
+}
+
+.content__left__menu__quantity {
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    background: black;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.content__left__item{
+    margin-top:25px;
+    height: 650px;
+    overflow:overlay;
+}
+.content__left__item::-webkit-scrollbar {
+    /* display: none; */
+}
+.content__left__stepper__service, .content__left__stepper__staff, .content__left__stepper__time{
+    height: 60px;
+    width:60px;
+    background-color:black;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.content__left__item>p {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.content__right {
+    width: 600px;
+    background-color:#FAFAFA;
+    height: 888px;
+    border-left: 1px solid #EEEEEE;
+}
+
+.content__right__cart{
+    height: 100px;
+    box-sizing: border-box;
+    background-color:white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:12px;
+
+}
+.content__right__cartItem{
+    padding:0px 12px;
+}
+.content__right__cart__selected__icon{
+    height: 24px;
+    color:#707070;
+}
+.content__right__cart__selected{
+    display: flex;
+    align-items: center;
+    flex: 0.4;
+}
+.content__right__cart__selected>p{
+    color:#707070;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: medium;
+    margin-left: 12px;
+}
+.content__right__cart>p{
+    font-size:24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color:#404040;
+}
+.content__right__total{
+    margin: 12px;
+    background-color:white;
+    height: 72px;
+    border-radius:5px;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content__right__total__time>p{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #484848;
+    font-weight: medium;
+}
+.content__right__total__time, .content__right__total__price{
+    display: flex;
+    justify-content: space-between;
+}
+.content__right__total__price>p{
+    color:#111111;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
