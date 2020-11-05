@@ -6,36 +6,9 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import PeopleIcon from '@material-ui/icons/People';
 import SpaIcon from '@material-ui/icons/Spa';
-import { useDispatch, useSelector } from 'react-redux';
-import { loadServiceReq, loadServiceItemReq, loadServiceExtra, loadServiceSelect, cartItem } from '../../redux/actions/index';
+
 import '../style/container.css';
 function Container() {
-  const [service, setService] = useState('Manicure');
-  const selectedService = (nameService) => {
-    setService(nameService);
-  }
-  const dispatch = useDispatch();
-  const serviceList = useSelector((state) => state.loadService);
-  const cartItemList = useSelector((state) => state.cartItem);
-  const serviceListItem = useSelector((state) => state.loadServiceItem);
-  const serviceListExtra = useSelector((state) => state.loadServiceExtra);
-  const serviceListSelect = useSelector((state) => state.loadServiceSelect);
-  console.log(cartItemList)
-
-  const dispatchFetchService = () => { dispatch(loadServiceReq()) };
-  const addToCart = (id, service, extra) => { dispatch(cartItem(id, service, extra)) }
-  const dispatchFetchServiceItem = (categoryId) => { dispatch(loadServiceItemReq(categoryId)) };
-  const dispatchFetchServiceExtra = (extra, rootPrice, rootTime) => { dispatch(loadServiceExtra(extra, rootPrice, rootTime)) };
-  const dispatchFetchServiceSelect = (id, name, time, price) => { dispatch(loadServiceSelect(id, name, time, price)) };
-  useEffect(() => {
-    dispatchFetchService();
-    // dispatchFetchServiceItem(94);
-    // dispatchFetchServiceItem(91);
-    // dispatchFetchServiceItem(68);
-    dispatchFetchServiceItem(67);
-    // dispatchFetchServiceItem(90);
-
-  }, [])
   return (
 
     <div className="container">
@@ -66,25 +39,16 @@ function Container() {
             </div>
           </div>
           <div className="content__left__menu">
-            {
-              serviceList.map((item, index) => {
-                return (
-                  <div className="content__left__menu__item">
-                    <p key={index} className={item.name === service ? ('content__left__menu__isSelected') : ('')} onClick={() => selectedService(item.name)}>{item.name}</p>
-                    {/* {type.isSelected ? (<p className="content__left__menu__quantity">5</p>) : ('')} */}
-                  </div>
-                )
-              })
-            }
+            <div className="content__left__menu__item">
+              <p>HAHAHAHA</p>
+              <p>AAAAAAAAAAAA</p>
+              <p>BBBBBBBBBB</p>
+              <p>CCCC</p>
+
+              {/* {type.isSelected ? (<p className="content__left__menu__quantity">5</p>) : ('')} */}
+            </div>
           </div>
           <ListItem
-            serviceListItem={serviceListItem}
-            serviceListExtra={serviceListExtra}
-            dispatchFetchServiceExtra={dispatchFetchServiceExtra}
-            serviceListSelect={serviceListSelect}
-            dispatchFetchServiceSelect={dispatchFetchServiceSelect}
-            addToCart={addToCart}
-
           />
         </div>
         <div className="content__right">

@@ -1,27 +1,6 @@
 import { TYPES } from '../contants/index';
 import data from './../api/loadService';
 import dataServiceItem from './../api/loadServiceItem';
-export const cartItem = (id, service, extra) => ({
-    type: TYPES.ADD_TO_CART,
-    data: { id, service, extra }
-})
-export const loadServiceExtra = (extra, rootPrice, rootTime) => ({
-    type: TYPES.LOAD_SERVICE_EXTRA,
-    data: {
-        extra,
-        rootPrice,
-        rootTime
-    }
-})
-export const loadServiceSelect = (id, name, time, price) => ({
-    type: TYPES.USER_SELECT_SERVICE,
-    data: {
-        id,
-        name,
-        time,
-        price,
-    }
-})
 export const loadService = (data) => ({
     type: TYPES.LOAD,
     data: data

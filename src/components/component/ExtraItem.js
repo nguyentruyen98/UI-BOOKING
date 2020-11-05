@@ -1,21 +1,18 @@
 import React from 'react'
 import './../style/extraitem.css';
-function ExtraItem({ id, name, time, price, dispatchFetchServiceSelect }) {
+function ExtraItem() {
 
-    const SelectService = (id, name, time, price) => {
-        dispatchFetchServiceSelect(id, name, time, price);
-    }
+   
     return (
         <div className="extra-item">
             <div className="extra-item__detail">
                 <div className="extra-item__detail__title">
-                    <input name="isSelected" type="checkbox"
-                        onClick={() => SelectService(id, name, time, price)} />
-                    <p >{name}</p>
+                    <input name="isSelected" type="checkbox"/>
+                    <p >HAHAHAH</p>
                 </div>
-                <p>{`${time} min`}</p>
+                <p>{`HIHI min`}</p>
             </div>
-            <p>{`$ ${price}`}</p>
+            <p>{`$ HAHAH`}</p>
         </div>
     )
 }
